@@ -1,0 +1,58 @@
+propel:
+  _attributes:
+    package: lib.model
+    defaultIdMethod: native
+  caratula:
+    _attributes: { phpName: Caratula }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    id_cliente: { phpName: IdCliente, type: INTEGER, required: true, foreignTable: cliente, foreignReference: id, onDelete: RESTRICT, onUpdate: CASCADE }
+    fecha_levantamiento: { phpName: FechaLevantamiento, type: DATE, required: true }
+    fecha_entrega: { phpName: FechaEntrega, type: DATE, required: false }
+    status: { phpName: Status, type: VARCHAR, size: '32', required: false }
+  cliente:
+    _attributes: { phpName: Cliente }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    nombre_razon_social: { phpName: NombreRazonSocial, type: VARCHAR, size: '256', required: true }
+    contacto: { phpName: Contacto, type: VARCHAR, size: '256', required: false }
+    calle: { phpName: Calle, type: VARCHAR, size: '128', required: false }
+    numero_ext_int: { phpName: NumeroExtInt, type: VARCHAR, size: '16', required: false }
+    colonia: { phpName: Colonia, type: VARCHAR, size: '128', required: false }
+    cp: { phpName: Cp, type: INTEGER, required: false }
+    telefono: { phpName: Telefono, type: VARCHAR, size: '12', required: false }
+    telefono_extension: { phpName: TelefonoExtension, type: VARCHAR, size: '10', required: false }
+    celular: { phpName: Celular, type: INTEGER, required: false }
+    correo_empresarial: { phpName: CorreoEmpresarial, type: VARCHAR, size: '128', required: false }
+    correo_personal: { phpName: CorreoPersonal, type: VARCHAR, size: '128', required: false }
+  cotizacion:
+    _attributes: { phpName: Cotizacion }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    folio_caratula: { phpName: FolioCaratula, type: INTEGER, required: true, foreignTable: caratula, foreignReference: id, onDelete: RESTRICT, onUpdate: CASCADE }
+    fecha_cotizacion: { phpName: FechaCotizacion, type: DATE, required: true }
+    precio_optimo: { phpName: PrecioOptimo, type: INTEGER, required: false }
+    precio_sencillo: { phpName: PrecioSencillo, type: INTEGER, required: true }
+    status: { phpName: Status, type: VARCHAR, size: '48', required: true }
+    fecha_ultimo_contacto: { phpName: FechaUltimoContacto, type: DATE, required: false }
+    tipo_contacto: { phpName: TipoContacto, type: VARCHAR, size: '32', required: false }
+    fecha_sigui_contacto: { phpName: FechaSiguiContacto, type: DATE, required: false }
+    tipo_sigui_contacto: { phpName: TipoSiguiContacto, type: VARCHAR, size: '32', required: false }
+    fecha_venta: { phpName: FechaVenta, type: DATE, required: false }
+  factura_cliente:
+    _attributes: { phpName: FacturaCliente }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    id_cliente: { phpName: IdCliente, type: INTEGER, required: true, foreignTable: cliente, foreignReference: id, onDelete: RESTRICT, onUpdate: CASCADE }
+    razon_social: { phpName: RazonSocial, type: VARCHAR, size: '128', required: true }
+    rfc: { phpName: Rfc, type: VARCHAR, size: '15', required: false }
+    contacto_seguimiento: { phpName: ContactoSeguimiento, type: VARCHAR, size: '256', required: false }
+    calle: { phpName: Calle, type: VARCHAR, size: '64', required: false }
+    numero_ext_int: { phpName: NumeroExtInt, type: VARCHAR, size: '16', required: false }
+    colonia: { phpName: Colonia, type: VARCHAR, size: '64', required: false }
+    municipio: { phpName: Municipio, type: VARCHAR, size: '64', required: false }
+    estado: { phpName: Estado, type: VARCHAR, size: '128', required: false }
+    pais: { phpName: Pais, type: VARCHAR, size: '128', required: false }
+    telefono: { phpName: Telefono, type: INTEGER, required: false }
+    telefono_extension: { phpName: TelefonoExtension, type: VARCHAR, size: '10', required: false }
+    segundo_telefono: { phpName: SegundoTelefono, type: INTEGER, required: false }
+    telefono_extension_dos: { phpName: TelefonoExtensionDos, type: VARCHAR, size: '10', required: false }
+    correo_electronico: { phpName: CorreoElectronico, type: VARCHAR, size: '128', required: false }
+    segmento: { phpName: Segmento, type: VARCHAR, size: '32', required: false }
+    acercamiento: { phpName: Acercamiento, type: VARCHAR, size: '64', required: false }

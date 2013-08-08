@@ -1,0 +1,88 @@
+caratula:
+  class: sfPropelRouteCollection
+  options:
+    model:                Caratula
+    module:               caratula
+    prefix_path:          /caratula
+    column:               id
+    with_wildcard_routes: true
+
+cotizacion:
+  class: sfPropelRouteCollection
+  options:
+    model:                Cotizacion
+    module:               cotizacion
+    prefix_path:          /cotizacion
+    column:               id
+    with_wildcard_routes: true
+
+factura_cliente:
+  class: sfPropelRouteCollection
+  options:
+    model:                FacturaCliente
+    module:               facturacliente
+    prefix_path:          /facturacliente
+    column:               id
+    with_wildcard_routes: true
+
+cliente:
+  class: sfPropelRouteCollection
+  options:
+    model:                Cliente
+    module:               cliente
+    prefix_path:          /cliente
+    column:               id
+    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+
+homepage:
+  url:   /
+  param: { module: ver, action: index }
+
+legal:
+  url:   /
+  param: { module: ver, action: index }
+
+about:
+  url:   /
+  param: { module: ver, action: index }
+
+download_manual:
+  url:   /download/manual.:sf_format
+  param: { module: ver, action: DownloadManual, sf_format: pdf}
+
+
+change_password:
+  url:              /changepassword
+  param:            { module: ver, action: ChangePasswordShow }
+change_password_do:
+  url:              /dochangepassword
+  param:            { module: ver, action: ChangePassword }
+
+recover_password:
+  url:              /recoverpassword
+  param:            { module: ver, action: RecoverPasswordShow }
+recover_password_do:
+  url:              /dorecoverpassword
+  param:            { module: ver, action: RecoverPassword }
+
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+sf_guard_password:
+  url:   /request_password
+  param: { module: sfGuardAuth, action: password }
+# default rules
+

@@ -1,0 +1,40 @@
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: ventas
+    description: 'Grupo de ventas'
+  sfGuardGroup_2:
+    name: secretaria
+    description: 'Grupo de Secretaria'
+  sfGuardGroup_3:
+    name: administrador
+    description: 'Administrador del Sistema'
+sfGuardPermission:
+  sfGuardPermission_1:
+    name: administrador
+    description: 'Permiso de administrador'
+  sfGuardPermission_2:
+    name: ventas
+    description: 'Permiso de ventas'
+  sfGuardPermission_3:
+    name: secretaria
+    description: 'Permiso de secretaria'
+sfGuardGroupPermission:
+  sfGuardGroupPermission_3_1:
+    group_id: sfGuardGroup_3
+    permission_id: sfGuardPermission_1
+  sfGuardGroupPermission_1_2:
+    group_id: sfGuardGroup_1
+    permission_id: sfGuardPermission_2
+  sfGuardGroupPermission_2_3:
+    group_id: sfGuardGroup_2
+    permission_id: sfGuardPermission_3
+sfGuardUser:
+  sfGuardUser_2:
+    username: abraham
+    algorithm: sha1
+    salt: 861ca11dd8096896e001492e154fd082
+    password: ed13a47c76c0068c0caeb1662e55156043366f6f
+    created_at: '2013-07-25 15:44:28'
+    last_login: '2013-07-25 15:44:47'
+    is_active: true
+    is_super_admin: true
