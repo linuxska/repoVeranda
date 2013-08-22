@@ -20,7 +20,7 @@
             <ul class="menu_sub">
                 <li class ="menu_sub_header"><a class="alternate" href="<?php echo url_for('@homepage') ?>"></a>Clientes Veranda</li>
                 <li class="app <?php echo in_array('cliente', explode('/', $sf_request->getUri())) ? "selected" : "" ?>"><a href="<?php echo url_for('@cliente') ?>" class="alternate">Catálogo de clientes</a></li>
-                <li class="app  <?php echo in_array('factura', explode('/', $sf_request->getUri())) ? "selected" : "" ?>"><a href="<?php echo url_for('@factura_cliente') ?>" class="alternate">Razón Social</a></li>
+                <li class="app  <?php echo in_array('factura', explode('/', $sf_request->getUri())) ? "selected" : "" ?>"><a href="<?php echo url_for('@factura_cliente') ?>" class="alternate">Razón Social (Facturación)</a></li>
                 <li class="app  <?php echo in_array('caratula', explode('/', $sf_request->getUri())) ? "selected" : "" ?>"><a href="<?php echo url_for('@caratula') ?>" class="alternate">Catalogo de Caratulas</a></li>
                 <li class="app  <?php echo in_array('cotizacion', explode('/', $sf_request->getUri())) ? "selected" : "" ?>"><a href="<?php echo url_for('@cotizacion') ?>" class="alternate">Catalogo de Cotizaciones</a></li>
             </ul>

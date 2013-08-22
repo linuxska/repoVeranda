@@ -17,5 +17,7 @@
  * @package    lib.model
  */
 class FacturaCliente extends BaseFacturaCliente {
-
+	public function getDireccion() {
+        return sprintf("%s %s ", $this->getCalle() , $this->getNumeroExtInt());
+    }
 } // FacturaCliente

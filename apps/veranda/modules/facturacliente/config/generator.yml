@@ -13,9 +13,23 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
+      fields: 
+        id_cliente:    { label: Cliente }
+        razon_social:  { label: Razón Social  }
+        rfc:           { label: RFC }
+        pais:          { label: País  }
+        telefono:      { label: Teléfono }
+        telefono_extension: { label: Ext teléfono  }
+        segundo_telefono: { label: Segundo Teléfono }
+        telefono_extension_dos: { label: Ext segundo teléfono }
+        correo_electronico: { label: Correo electrónico  }
+      list:
+        title: Catalogo de información de facturación por cliente.
+        display: [id, razon_social, rfc, contacto_seguimiento, direccion, municipio, estado, telefono, correo_electronico, segmento, acercamiento]
+      filter:
+        display: [id, razon_social, rfc, contacto_seguimiento, municipio, estado, telefono, correo_electronico, segmento, acercamiento]
       form:    ~
-      edit:    ~
-      new:     ~
+      edit:
+        title: Editar la información de %%razon_social%%
+      new:
+        title: Capturar nuevos datos de facturación

@@ -17,5 +17,7 @@
  * @package    lib.model
  */
 class Caratula extends BaseCaratula {
-
+	public function __toString() {
+        return sprintf("%s ", $this->getNombreRazonSocial());
+    }
 } // Caratula

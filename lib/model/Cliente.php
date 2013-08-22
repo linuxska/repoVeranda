@@ -21,6 +21,9 @@ class Cliente extends BaseCliente {
 	public function __toString() {
         return sprintf("%s ", $this->getNombreRazonSocial());
     }
+    public function getDireccion() {
+        return sprintf("%s %s ", $this->getCalle() , $this->getNumeroExtInt());
+    }
 
 
 } // Cliente

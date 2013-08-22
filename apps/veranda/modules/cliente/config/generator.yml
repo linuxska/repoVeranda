@@ -13,9 +13,19 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
+      fields:
+        nombre_razon_social: { label: Razón Social }
+        direccion: { label: Dirección }
+        telefono: { label: Teléfono }
+        direccion: { label: Dirección }
+        cp: { label: Código Postal }
+        telefono_extension: { label: Ext }
+      list:
+        title: Catalogo de clientes
+        display: [nombre_razon_social, contacto, direccion,numero_ext_int,  colonia, cp, telefono,telefono_extension, celular, correo_empresarial, correo_personal ]
+      filter:
+        display: [nombre_razon_social, contacto, calle, colonia, telefono, celular, correo_empresarial, correo_personal ]
       form:    ~
       edit:    ~
-      new:     ~
+      new:     
+        title: Nuevo cliente
