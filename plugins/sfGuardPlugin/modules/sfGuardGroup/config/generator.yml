@@ -11,11 +11,15 @@ generator:
     with_propel_route:     1
 
     config:
+      fields:
+        name: { label: Nombre }
+        description:    { label: Descripción }
+        sf_guard_group_permission_list:  { label: Grupos }
       list:
-        title: Group list
+        title: Lista de grupos
 
       edit:
-        title: Editing Group "%%name%%"
+        title: Editar el grupo "%%name%%"
 
       new:
-        title: New Group
+        title: Nuevo grupo

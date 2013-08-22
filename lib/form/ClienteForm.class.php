@@ -26,7 +26,6 @@ class ClienteForm extends BaseClienteForm
         $this->setValidator('telefono_extension', new sfValidatorRegex(array('max_length' => 12, 'pattern' => '/^[0-9]{1,}+$/', 'required' => false), array('max_length' => '"%value%" es muy grande (máximo %max_length% caracteres).', 'required' => 'Requerido.', 'invalid' => 'Inválido. ##########')));
 
         $this->setValidator('celular', new sfValidatorRegex(array('max_length' => 12, 'pattern' => '/^[0-9]{5,}+$/', 'required' => false), array('max_length' => '"%value%" es muy grande (máximo %max_length% caracteres).', 'required' => 'Requerido.', 'invalid' => 'Inválido. ##########')));
-
         $this->widgetSchema->setHelps(array(
             'cp' => 'Formato a 5 dígitos númericos sin espacios #####',
             'correo_empresarial' => 'juan.perez@example.com',

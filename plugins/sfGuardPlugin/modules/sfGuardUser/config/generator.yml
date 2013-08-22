@@ -12,20 +12,27 @@ generator:
 
     config:
       fields:
-        password_again: { label: "Password (again)" }
+        password_again: { label: "Password (otra vez)" }
+        username:    { label: Usuario }
+        is_active:  { label: Esta activo? }
+        is_super_admin:  { label: Es superusuario? }
+        sf_guard_user_group_list:  { label: Grupos }
+        sf_guard_user_permission_list:  { label: Permisos }
+        created_at:  { label: Creado el dia }
+        last_login:  { label: Ultimo acceso al sistema }
 
       list:
-        title:   User list
+        title:   Lista de usuarios
         display: [=username, created_at, last_login]
 
       form:
         class: sfGuardUserAdminForm
         display:
           "NONE":                   [username, password, password_again]
-          "Permissions and groups": [is_active, is_super_admin, sf_guard_user_group_list, sf_guard_user_permission_list]
+          "Pemisos y grupos": [is_active, is_super_admin, sf_guard_user_group_list, sf_guard_user_permission_list]
 
       edit:
-        title: Editing User "%%username%%"
+        title: Editar usuario "%%username%%"
 
       new:
-        title: New User
+        title: Nuevo usuario
